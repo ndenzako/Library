@@ -16,8 +16,6 @@
 #include<QSqlRecord>
 #include<QSpinBox>
 #include<QCheckBox>
-
-
 hireBook::hireBook(QWidget *parent)
 : QDialog(parent)
 {
@@ -36,7 +34,6 @@ hireBook::hireBook(QWidget *parent)
 	connect(morePushButton, SIGNAL(toggled(bool)), hireBookGroupBox, SLOT(setVisible(bool)));
 	//activateGroupBox();
 	connect(morePushButton, SIGNAL(toggled(bool)), bringbackBookGroupBox, SLOT(setVisible(bool)));
-	
 	connect(selectPushButton, SIGNAL(clicked()), this, SLOT(selectButtonSlot()));
 	connect(newSelectionPushButton, SIGNAL(clicked()), this, SLOT(selectNewButton()));
 	connect(closePushButton,SIGNAL(clicked()),this,SLOT(accept()));
@@ -47,10 +44,7 @@ hireBook::hireBook(QWidget *parent)
 	connect(bookIdLineEdit,SIGNAL(textChanged(const QString&)),this,SLOT(searchBook()));
 	//connect(numInventaireLineEdit,SIGNAL(textChanged(const QString&)),this,SLOT(activateSaveButton()));
 	connect(savePushButton,SIGNAL(clicked()),this,SLOT(saveHireBookData()));
-	
-	
-	
-	
+
 	this->setStyleSheet("QGroupBox"
     "{"
         "background-color:transparent;"
