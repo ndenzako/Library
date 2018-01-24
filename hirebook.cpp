@@ -340,7 +340,6 @@ numExemplaireSpinBox->hide();
 }
 }
 
-
 int hireBook::getBookQuantity(const QString numinv)
 {
 QString strQantityQuery = QString("SELECT quantity FROM quantitytable WHERE numinv=%0%1%2").arg("'").arg(numinv).arg("'");
@@ -381,8 +380,6 @@ void hireBook::searchBook()
 {
 QString srtNumInv = bookIdLineEdit->text();
 QString srtBookQuery;
-//if(!srtNumInv.isEmpty())
-//{
 QSqlQueryModel queryModel;
 
 QStringList list;
